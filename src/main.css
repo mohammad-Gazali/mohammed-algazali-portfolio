@@ -4,4 +4,15 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.animate-float {
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-6px);
+    }
 }

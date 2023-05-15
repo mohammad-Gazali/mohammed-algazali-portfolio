@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Welcome = () => {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center">
+		<section className="h-screen flex flex-col justify-center items-center sm:pt-0 pt-10">
 			<motion.h1 
             initial={{ y: -400 }}
             animate={{ y: 0 }}
@@ -20,8 +20,8 @@ const Welcome = () => {
 				<span className="text-secondary font-semibold">{constants.name}</span>
 			</motion.h1>
 			<motion.p
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
+			initial={{ opacity: 0, translateX: 20 }}
+			animate={{ opacity: 1, translateX: 0 }}
 			transition={{
 				delay: 0.6,
 				duration: 0.4
@@ -29,18 +29,9 @@ const Welcome = () => {
 			className="opacity-90 max-w-3xl xl:text-xl lg:text-lg text-base text-center mt-6 px-6">
 				{constants.intro}
 			</motion.p>
-			<motion.div 
-			initial={{ scale: 0 }}
-			animate={{ scale: 1 }}
-			transition={{
-				delay: 1.4,
-				duration: 0.4,
-				type: "spring",
-				damping: 17,
-				stiffness: 180
-			}}
+			<motion.div
 			className="mt-10 flex flex-wrap justify-center items-center gap-x-10 gap-y-3 max-w-2xl w-full px-4">
-				<Button href="#" className="grow" size="lg" asLink>
+				<Button order={1} initialDelay={0.5} href="#about-section" className="grow" size="lg" asLink>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -57,7 +48,7 @@ const Welcome = () => {
 					</svg>
 					About me
 				</Button>
-				<Button href="#" className="grow" size="lg" asLink>
+				<Button order={2} initialDelay={0.5} href="#" className="grow" size="lg" asLink>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
