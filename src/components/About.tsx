@@ -7,8 +7,8 @@ import { buttonVariants } from "./common/Button";
 const About = () => {
   return (
     <Container section id="about-section" className="pt-10 min-h-screen scroll-mt-10">
-        <div className="flex lg:justify-between justify-center items-start gap-5">
-            <div className="w-2/3">
+        <div className="flex lg:justify-between  items-start gap-5">
+            <div className="lg:w-2/3">
                 <Header animation>
                     About me
                 </Header>
@@ -18,7 +18,7 @@ const About = () => {
                 whileInView={{ opacity: 1, translateX: 0 }}
                 viewport={{ once: true }}
                 transition={{ 
-                    delay: 0.5
+                    delay: 0.3
                 }}
                 >
                     {constants.about}
@@ -28,11 +28,22 @@ const About = () => {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ 
-                    delay: 0.8
+                    delay: 0.5
                 }}
-                className={buttonVariants({ size: "lg", className: "mt-10 w-fit" })} href="#skills-section"
+                className={buttonVariants({ size: "lg", className: "mt-6 lg:w-fit" })} href="#skills-section"
                 >
                     Let's Go To See My Skills
+                </motion.a>
+                <motion.a
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                    delay: 0.5
+                }}
+                className={buttonVariants({ size: "lg", className: "mt-4 lg:w-fit" })} href="#projects-section"
+                >
+                    Let's Go To See My Projects
                 </motion.a>
             </div>
             <figure className="lg:block hidden">
@@ -41,7 +52,7 @@ const About = () => {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ 
-                    delay: 1.2
+                    delay: 0.8
                 }}
                 src="assets/developer.svg" alt="developer" 
                 />
@@ -49,8 +60,8 @@ const About = () => {
                 initial={{ opacity: 0, translateX: -20 }}
                 whileInView={{ opacity: 0.6, translateX: 0 }}
                 viewport={{ once: true }}
-                transition={{ 
-                    delay: 1.3
+                transition={{
+                    delay: 1
                 }}
                 className="text-sm text-center text-primary-foreground underline"
                 >

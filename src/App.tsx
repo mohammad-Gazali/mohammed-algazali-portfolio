@@ -1,4 +1,4 @@
-import { About, Navbar, Skills, Welcome } from "./components";
+import { About, Navbar, Projects, Skills, Welcome } from "./components";
 
 
 
@@ -10,6 +10,7 @@ const App = () => {
 			<Welcome />
 			<About />
 			<Skills />
+			<Projects />
 		</main>
 	);
 };

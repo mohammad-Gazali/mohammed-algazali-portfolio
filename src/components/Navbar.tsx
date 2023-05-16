@@ -9,12 +9,10 @@ const Navbar = () => {
 
 	return (
 		<motion.nav
-			initial={{ y: -64 }}
+			initial={{ y: -400 }}
 			animate={{ y: 0 }}
-			transition={{
-				delay: 3,
-			}}
-			className="absolute inset-x-0 top-0 h-16 transition-colors ease-in-out z-50"
+			
+			className="absolute inset-x-0 top-0 h-16 z-50"
 		>
 			<Container className="flex sm:justify-end justify-center items-center">
 				<ul className="flex items-center gap-4">
