@@ -1,5 +1,5 @@
 import { Container, Header } from "./common";
-import constants from "../constants";
+import { skills } from "../constants";
 import { Skill } from "../types/app";
 import { motion } from "framer-motion";
 
@@ -12,7 +12,7 @@ const Skills = () => {
             Skills
         </Header>
         <ul className="flex justify-center flex-wrap gap-8 mt-4">
-          {constants.skills.map(skill => (
+          {skills.map(skill => (
             <SkillCard key={skill.id} skill={skill} />
           ))}
         </ul>

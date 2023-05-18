@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Container, Header } from "./common";
-import constants from "../constants";
+import { basic } from "../constants";
 import { buttonVariants } from "./common/Button";
 
 
 const About = () => {
   return (
     <Container section id="about-section" className="pt-10 min-h-screen scroll-mt-10">
-        <div className="flex lg:justify-between  items-start gap-5">
+        <div className="flex lg:justify-between items-start gap-5">
             <div className="lg:w-2/3">
                 <Header animation>
                     About me
@@ -21,30 +21,43 @@ const About = () => {
                     delay: 0.3
                 }}
                 >
-                    {constants.about}
+                    {basic.about}
                 </motion.p>
-                <motion.a
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ 
-                    delay: 0.5
-                }}
-                className={buttonVariants({ size: "lg", className: "mt-6 lg:w-fit" })} href="#skills-section"
-                >
-                    Let's Go To See My Skills
-                </motion.a>
-                <motion.a
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ 
-                    delay: 0.5
-                }}
-                className={buttonVariants({ size: "lg", className: "mt-4 lg:w-fit" })} href="#projects-section"
-                >
-                    Let's Go To See My Projects
-                </motion.a>
+                <div className="flex gap-4 flex-wrap my-4">
+                    <motion.a
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                        delay: 0.5
+                    }}
+                    className={buttonVariants({ size: "lg", className: "grow lg:w-fit" })} href="#skills-section"
+                    >
+                        My Skills
+                    </motion.a>
+                    <motion.a
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                        delay: 0.5
+                    }}
+                    className={buttonVariants({ size: "lg", className: "grow lg:w-fit" })} href="#projects-section"
+                    >
+                        My Projects
+                    </motion.a>
+                    <motion.a
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                        delay: 0.5
+                    }}
+                    className={buttonVariants({ size: "lg", className: "grow lg:w-fit" })} href="#technologies-sections"
+                    >
+                        My Technologies
+                    </motion.a>
+                </div>
             </div>
             <figure className="lg:block hidden">
                 <motion.img 

@@ -1,37 +1,46 @@
-import constants from "../constants";
+import { basic } from "../constants";
 import { Button } from "./common";
 import { motion } from "framer-motion";
 
+
+
 const Welcome = () => {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center sm:pt-0 pt-10">
-			<motion.h1 
-            initial={{ y: -400 }}
-            animate={{ y: 0 }}
-			transition={{ 
-				duration: 0.2,
-				type: "spring",
-				damping: 17,
-				stiffness: 180
-			}}
-            className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-center uppercase px-6"
-            >
+		<section className="h-screen flex flex-col justify-center items-center">
+			<motion.h1
+				initial={{ y: -400 }}
+				animate={{ y: 0 }}
+				transition={{
+					duration: 0.2,
+					type: "spring",
+					damping: 17,
+					stiffness: 180,
+				}}
+				className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-center uppercase px-6"
+			>
 				Hello, I'm <br className="sm:hidden" />
-				<span className="text-secondary font-semibold">{constants.name}</span>
+				<span className="text-secondary font-semibold">{basic.name}</span>
 			</motion.h1>
 			<motion.p
-			initial={{ opacity: 0, translateX: 20 }}
-			animate={{ opacity: 1, translateX: 0 }}
-			transition={{
-				delay: 0.6,
-				duration: 0.4
-			}}
-			className="opacity-90 max-w-3xl xl:text-xl lg:text-lg text-base text-center mt-6 px-6">
-				{constants.intro}
+				initial={{ opacity: 0, translateX: 20 }}
+				animate={{ opacity: 1, translateX: 0 }}
+				transition={{
+					delay: 0.6,
+					duration: 0.4,
+				}}
+				className="opacity-90 max-w-3xl xl:text-xl lg:text-lg text-base text-center mt-6 px-6"
+			>
+				{basic.intro}
 			</motion.p>
-			<motion.div
-			className="mt-10 flex flex-wrap justify-center items-center gap-x-10 gap-y-3 max-w-2xl w-full px-4">
-				<Button order={1} initialDelay={0.5} href="#about-section" className="grow" size="lg" asLink>
+			<motion.div className="mt-10 flex flex-wrap justify-center items-center gap-3 max-w-2xl w-full px-4">
+				<Button
+					order={1}
+					initialDelay={0.5}
+					href="#about-section"
+					className="grow"
+					size="lg"
+					asLink
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -48,8 +57,37 @@ const Welcome = () => {
 					</svg>
 					About me
 				</Button>
-				<a href="/assets/CV.pdf" download="Mohammed-algazali-cv" className="grow" target="_blank">
-					<Button order={2} initialDelay={0.5} className="w-full" size="lg">
+				<Button
+					order={2}
+					initialDelay={0.5}
+					href="#contact-section"
+					className="grow"
+					size="lg"
+					asLink
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-7 h-7"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+						/>
+					</svg>
+					Contact
+				</Button>
+				<a
+					href="/assets/CV.pdf"
+					download="Mohammed-algazali-cv"
+					className="grow"
+					target="_blank"
+				>
+					<Button order={3} initialDelay={0.5} className="w-full" size="lg">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"

@@ -1,8 +1,7 @@
-export interface Constants {
+export interface Basic {
     name: string;
     intro: string;
     about: string;
-    skills: Skill[];
 }
 
 export interface Skill {
@@ -10,4 +9,19 @@ export interface Skill {
     title: string;
     description: string;
     icon: React.ReactNode;
+}
+
+export interface Project {
+    id: number;
+    name: string;
+    description: string;
+    repository: string;
+    images: string[];
+    technologies: Technology[];
+}
+
+export interface Technology {
+    name: string;
+    description: string;
+    image: string;
 }

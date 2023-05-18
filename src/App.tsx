@@ -1,4 +1,5 @@
-import { About, Navbar, Projects, Skills, Welcome } from "./components";
+import { About, Projects, Skills, Welcome, Technologies, Contact, Footer } from "./components";
+
 
 
 
@@ -6,11 +7,13 @@ const App = () => {
 
 	return (
 		<main className="bg-primary text-primary-foreground w-full min-h-screen overflow-x-hidden">
-			<Navbar />
 			<Welcome />
 			<About />
 			<Skills />
 			<Projects />
+			<Technologies />
+			<Contact />
+			<Footer />
 		</main>
 	);
 };
