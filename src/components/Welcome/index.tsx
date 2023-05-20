@@ -1,5 +1,5 @@
-import { basic } from "../constants";
-import { Button } from "./common";
+import { basic } from "../../constants";
+import { Button } from "../common";
 import { motion } from "framer-motion";
 
 

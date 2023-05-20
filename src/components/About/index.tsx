@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Container, Header } from "./common";
-import { basic } from "../constants";
-import { buttonVariants } from "./common/Button";
+import { Container, Header } from "../common";
+import { basic } from "../../constants";
+import { buttonVariants } from "../common/Button";
+
 
 
 const About = () => {

@@ -1,4 +1,4 @@
-import { Container, Header } from "./common"
+import { Container, Header } from "../common"
 
 
 const Contact = () => {

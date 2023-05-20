@@ -1,5 +1,5 @@
-import { basic } from "../constants";
-import { Container } from "./common";
+import { basic } from "../../constants";
+import { Container } from "../common";
 
 
 

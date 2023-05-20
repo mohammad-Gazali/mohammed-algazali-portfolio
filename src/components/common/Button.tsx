@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, HTMLAttributeAnchorTarget } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { motion } from "framer-motion";
 import cn from "../../utils/cn";
@@ -37,13 +37,15 @@ export interface ButtonProps extends VariantProps<typeof buttonVariants> {
     order?: number | undefined;
     initialDelay?: number | undefined;
     delay?: number;
+    target?: HTMLAttributeAnchorTarget;
 };
 
-const Button: FC<ButtonProps> = ({ variant, size, className, children, asLink = false, href, order, initialDelay, delay = 0.6 }) => {
+const Button: FC<ButtonProps> = ({ variant, size, className, children, asLink = false, href, order, initialDelay, delay = 0.6, target }) => {
 
     if (asLink) {
         return (<motion.a
         href={href}
+        target={target}
         initial={order ? { scale: 0 } : undefined}
         animate={order ? { scale: 1 } : undefined}
         transition={order ? {
