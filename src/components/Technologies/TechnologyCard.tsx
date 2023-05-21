@@ -17,7 +17,7 @@ const TechnologyCard: FC<TechnologyCardProps> = ({ technology, setSelectedId }) 
 			whileInView={{ opacity: 1, rotate: 0 }}
 			viewport={{ once: true }}
 			onClick={() => setSelectedId(technology.name)}
-			className="bg-primary-light hover:ring-4 hover:ring-secondary grow max-w-[170px] sm:w-44 w-32 sm:aspect-square p-4 shadow-inner shadow-primary-light-foreground/30 rounded-lg cursor-pointer flex flex-col items-center sm:gap-3 gap-2"
+			className="bg-primary-light ring-0 hover:ring-4 hover:ring-secondary grow max-w-[170px] sm:w-44 w-32 sm:aspect-square p-4 shadow-inner shadow-primary-light-foreground/30 rounded-lg cursor-pointer flex flex-col items-center sm:gap-3 gap-2 transition-shadow"
 			key={technology.name}
 		>
 			<h3 className="text-center sm:text-xl text-base font-medium w-full whitespace-nowrap">

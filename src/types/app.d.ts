@@ -1,7 +1,11 @@
+import React from "react";
+
+
 export interface Basic {
     name: string;
     intro: string;
     about: string;
+    github: string;
 }
 
 export interface Skill {
@@ -24,4 +28,10 @@ export interface Technology {
     name: string;
     description: string;
     image: string;
+}
+
+export interface SocialLink {
+    name: string;
+    href: string;
+    icon: React.ReactNode;
 }

@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 * {
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+}
 
-.custom-scrollbar {
-    
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(88, 88, 88, 0.849);
+    border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(88, 88, 88, 1);
 }

@@ -19,7 +19,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, setSelectedId }) => {
 			whileHover={{ scale: 1.05 }}
 			viewport={{ once: true }}
 			onClick={() => setSelectedId(project.name)}
-			className="bg-primary-light hover:bg-secondary-light hover:shadow-lg hover:shadow-secondary-light-foreground/20 max-w-xs rounded-lg cursor-pointer"
+			className="bg-primary-light hover:bg-secondary-light transition-colors hover:shadow-lg hover:shadow-secondary-light-foreground/20 max-w-xs rounded-lg cursor-pointer"
 			key={project.name}
 		>
 			<img

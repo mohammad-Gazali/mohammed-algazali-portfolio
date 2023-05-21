@@ -1,5 +1,5 @@
 import { Project } from "../types/app";
-import { bootstrap, css, django, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, python, react, supabase, tailwind, typescript } from "./technologies";
+import { bootstrap, css, django, framerMotion, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, python, react, supabase, tailwind, typescript } from "./technologies";
 
 
 
@@ -181,43 +181,24 @@ export default [
     },
     { 
         id: 8,
-        name: "React Hosting Website",
+        name: "React Portfolio",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus veniam aliquam? Quam asperiores temporibus vero ipsam eligendi accusantium officiis accusamus aut deserunt optio eos, culpa tempora maxime totam animi omnis. Asperiores reiciendis debitis reprehenderit illo non possimus odit in eius, necessitatibus quae ex autem corrupti quisquam fuga quod. Doloremque eligendi facere earum eius consequuntur harum natus dolorem, incidunt est, debitis quo architecto laboriosam vitae reprehenderit id dolores ad consequatur, quas qui beatae. Hic dolores dicta atque commodi autem consectetur odio libero quasi odit doloribus, ratione debitis, totam quam facilis aliquid ab! Inventore recusandae placeat at, omnis iusto ea id?",
-        repository: "https://github.com/mohammad-Gazali/hosting_app",
+        repository: "https://github.com/mohammad-Gazali/mohammed-algazali-portfolio",
         images: [
-            "/assets/projects/react-hosting-app/image-01.png",
-            "/assets/projects/react-hosting-app/image-02.png",
-            "/assets/projects/react-hosting-app/image-03.png",
-            "/assets/projects/react-hosting-app/image-04.png",
-            "/assets/projects/react-hosting-app/image-05.png",
-            "/assets/projects/react-hosting-app/image-06.png",
-            "/assets/projects/react-hosting-app/image-07.png",
+            "/assets/projects/react-portfolio/image-01.png",
+            "/assets/projects/react-portfolio/image-02.png",
+            "/assets/projects/react-portfolio/image-03.png",
+            "/assets/projects/react-portfolio/image-04.png",
+            "/assets/projects/react-portfolio/image-05.png",
+            "/assets/projects/react-portfolio/image-06.png",
+            "/assets/projects/react-portfolio/image-07.png",
+            "/assets/projects/react-portfolio/image-08.png",
         ],
         technologies: [
             react,
+            framerMotion,
             tailwind,
-            javascript,
-        ],
-    },
-    { 
-        id: 9,
-        name: "React Family Tree",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus veniam aliquam? Quam asperiores temporibus vero ipsam eligendi accusantium officiis accusamus aut deserunt optio eos, culpa tempora maxime totam animi omnis. Asperiores reiciendis debitis reprehenderit illo non possimus odit in eius, necessitatibus quae ex autem corrupti quisquam fuga quod. Doloremque eligendi facere earum eius consequuntur harum natus dolorem, incidunt est, debitis quo architecto laboriosam vitae reprehenderit id dolores ad consequatur, quas qui beatae. Hic dolores dicta atque commodi autem consectetur odio libero quasi odit doloribus, ratione debitis, totam quam facilis aliquid ab! Inventore recusandae placeat at, omnis iusto ea id?",
-        repository: "https://github.com/mohammad-Gazali/Family_Tree",
-        images: [
-            "/assets/projects/react-family-tree/image-01.png",
-            "/assets/projects/react-family-tree/image-02.png",
-            "/assets/projects/react-family-tree/image-03.png",
-            "/assets/projects/react-family-tree/image-04.png",
-            "/assets/projects/react-family-tree/image-05.png",
-            "/assets/projects/react-family-tree/image-06.png",
-            "/assets/projects/react-family-tree/image-07.png",
-        ],
-        technologies: [
-            react,
-            materialUI,
-            graphql,
-            javascript,
+            typescript,
         ],
     },
 ] satisfies Project[];
