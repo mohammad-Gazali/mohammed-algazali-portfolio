@@ -1,5 +1,5 @@
+import { Toaster } from "react-hot-toast";
 import { About, Projects, Skills, Welcome, Technologies, Contact, Footer } from "./components";
-
 
 
 
@@ -14,6 +14,8 @@ const App = () => {
 			<Technologies />
 			<Contact />
 			<Footer />
+
+			<Toaster />
 		</main>
 	);
 };

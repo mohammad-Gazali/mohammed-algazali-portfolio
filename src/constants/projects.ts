@@ -193,6 +193,7 @@ export default [
             "/assets/projects/react-portfolio/image-06.png",
             "/assets/projects/react-portfolio/image-07.png",
             "/assets/projects/react-portfolio/image-08.png",
+            "/assets/projects/react-portfolio/image-09.png",
         ],
         technologies: [
             react,

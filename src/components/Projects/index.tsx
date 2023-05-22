@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectCardAnimatePresence from "./ProjectCardAnimatePresence";
 import { useState } from "react";
-import { buttonVariants } from "../common/Button";
+import { buttonVariants } from "../../utils/button-variants";
+
 
 const Projects = () => {
 	const [selectedId, setSelectedId] = useState<string | null>(null);
