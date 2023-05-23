@@ -12,7 +12,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 			className="flex flex-col items-center gap-4 py-8 border-4 border-primary-light-foreground/20 bg-gradient-to-r from-primary-light via-transparent to-primary-light rounded-lg transition-all duration-500"
 		>
 			{skill.icon}
-			<h3 className="font-medium text-center text-2xl transition-all">
+			<h3 className="px-3 font-medium text-center text-2xl transition-all">
 				{skill.title}
 			</h3>
 			<p className="px-10 text-center opacity-70 transition-all">
