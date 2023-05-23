@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC } from "react";
 import { technologies } from "../../constants";
 import { Container, Header } from "../common";
 import TechnologyCard from "./TechnologyCard";
@@ -6,8 +6,13 @@ import TechnologyCardAnimatePresence from "./TechnologyCardAnimatePresence";
 
 
 
-const Technologies = () => {
-	const [selectedId, setSelectedId] = useState<string | null>(null);
+interface TechnologiesProps {
+	selectedId: string | null;
+	setSelectedId: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const Technologies: FC<TechnologiesProps> = ({ selectedId, setSelectedId }) => {
+
 
 	const selectedTech = technologies.find((tech) => tech.name === selectedId);
 

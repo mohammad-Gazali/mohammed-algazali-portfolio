@@ -11,15 +11,24 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project, setSelectedId }) => {
 
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLLIElement>) => {
+		if (e.key === " " || e.key === "Enter") {
+			e.preventDefault();
+			setSelectedId(project.name)
+		}
+	}
+
 	return (
         <motion.li
+			tabIndex={0}
+			onKeyDown={handleKeyDown}
 			layoutId={project.name}
 			initial={{ scale: 0 }}
 			whileInView={{ scale: 1 }}
 			whileHover={{ scale: 1.05 }}
 			viewport={{ once: true }}
 			onClick={() => setSelectedId(project.name)}
-			className="bg-primary-light hover:bg-secondary-light transition-colors hover:shadow-lg hover:shadow-secondary-light-foreground/20 max-w-xs rounded-lg cursor-pointer"
+			className="bg-primary-light focus-visible:ring-4 focus-visible:ring-secondary focus-visible:outline-none hover:bg-secondary-light transition-colors hover:shadow-lg hover:shadow-secondary-light-foreground/20 max-w-xs rounded-lg cursor-pointer"
 			key={project.name}
 		>
 			<img

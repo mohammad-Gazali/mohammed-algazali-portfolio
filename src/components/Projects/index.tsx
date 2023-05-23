@@ -3,13 +3,18 @@ import { Container, Header } from "../common";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectCardAnimatePresence from "./ProjectCardAnimatePresence";
-import { useState } from "react";
+import { FC } from "react";
 import { buttonVariants } from "../../utils/button-variants";
 
 
-const Projects = () => {
-	const [selectedId, setSelectedId] = useState<string | null>(null);
 
+interface ProjectsProps {
+	selectedId: string | null;
+	setSelectedId: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const Projects: FC<ProjectsProps> = ({ selectedId, setSelectedId }) => {
+	
 	const selectedProject = projects.find(
 		(project) => project.name === selectedId
 	);

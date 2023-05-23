@@ -18,7 +18,7 @@ export interface Skill {
 export interface Project {
     id: number;
     name: string;
-    description: string;
+    description: React.ReactNode;
     repository: string;
     images: string[];
     technologies: Technology[];

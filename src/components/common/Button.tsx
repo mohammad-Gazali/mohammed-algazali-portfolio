@@ -15,12 +15,16 @@ export interface ButtonProps extends VariantProps<typeof buttonVariants> {
     initialDelay?: number | undefined;
     delay?: number;
     target?: HTMLAttributeAnchorTarget;
+    download?: string | undefined;
+    tabIndex?: number | undefined;
 }
 
-const Button: FC<ButtonProps> = ({ variant, size, className, children, asLink = false, href, order, initialDelay, delay = 0.6, target }) => {
+const Button: FC<ButtonProps> = ({ variant, size, className, children, asLink = false, href, order, initialDelay, delay = 0.6, target, download, tabIndex }) => {
 
     if (asLink) {
         return (<motion.a
+        download={download}
+        tabIndex={tabIndex}
         href={href}
         target={target}
         initial={order ? { scale: 0 } : undefined}
@@ -43,6 +47,7 @@ const Button: FC<ButtonProps> = ({ variant, size, className, children, asLink = 
     <motion.button
     initial={order ? { scale: 0 } : undefined}
     animate={order ? { scale: 1 } : undefined}
+    tabIndex={tabIndex}
     transition={order ? {
         delay: initialDelay ? delay * order + initialDelay : delay * order,
         duration: 0.4,

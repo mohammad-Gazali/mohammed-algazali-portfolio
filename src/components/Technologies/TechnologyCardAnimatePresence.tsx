@@ -18,7 +18,8 @@ const TechnologyCardAnimatePresence: FC<TechnologyCardAnimatePresenceProps> = ({
 		<AnimatePresence>
 			{selectedId && (
 				<motion.div
-					className="fixed inset-0 flex justify-center items-center bg-black/40"
+					tabIndex={1}
+					className="fixed inset-0 flex justify-center items-center bg-black/40 z-50 animate-presence"
 					onClick={() => setSelectedId(null)}
 				>
 					<motion.div
