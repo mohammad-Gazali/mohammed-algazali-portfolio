@@ -262,17 +262,17 @@ export default [
     },
     { 
         id: 7,
-        name: "Light Social facebook main page copy",
+        name: "Light Social Facebook main page copy",
         description: (
             <CommonProjectContent
             important="Light Social"
-            header="is a facebook main page copy, this website was built using React framework."
+            header="is a Facebook main page copy, this website was built using React framework."
             features={[
                 "Support for light and dark themes.",
             ]}
             />
         ),
-        repository: "https://github.com/mohammad-Gazali/Family_Tree",
+        repository: "https://github.com/mohammad-Gazali/Light_social_app",
         images: [
             "/assets/projects/react-light-social/image-01.png",
             "/assets/projects/react-light-social/image-02.png",

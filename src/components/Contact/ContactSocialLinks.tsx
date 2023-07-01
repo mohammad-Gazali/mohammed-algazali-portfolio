@@ -8,7 +8,7 @@ const ContactSocialLinks = () => {
     <ul className="flex flex-col sm:mt-12 grow gap-3">
         {social.map(link => (
             <li key={link.name}>
-                <Button variant="primary-light" href={link.href} asLink>
+                <Button target="_blank" variant="primary-light" href={link.href} asLink>
                     {link.icon} {link.name}
                 </Button>
             </li>

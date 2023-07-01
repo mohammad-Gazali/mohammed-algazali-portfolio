@@ -79,7 +79,7 @@ const About = () => {
                 }}
                 className="text-sm text-center text-primary-foreground underline"
                 >
-                    <a href="https://iconscout.com/illustrations/working-with-laptop" target="_blank">Free Working With Laptop Illustration</a> by <a href="https://iconscout.com/contributors/manypixels-gallery">Manypixels Gallery</a> on <a href="https://iconscout.com">IconScout</a>
+                    <a href="https://iconscout.com/illustrations/working-with-laptop" target="_blank">Free Working With Laptop Illustration</a> by <a href="https://iconscout.com/contributors/manypixels-gallery" target="_blank">Manypixels Gallery</a> on <a href="https://iconscout.com" target="_blank">IconScout</a>
                 </motion.figcaption>
             </figure>
         </div>
