@@ -1,6 +1,6 @@
 import { Project } from "../types/app";
 import { FC } from "react";
-import { bootstrap, css, django, framerMotion, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, python, react, supabase, tailwind, typescript } from "./technologies";
+import { bootstrap, css, dart, django, firebase, flutter, framerMotion, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, python, react, supabase, tailwind, typescript } from "./technologies";
 
 
 interface CommonProjectContentProps {
@@ -297,7 +297,7 @@ export default [
                 "Beautiful animation with Framer motion library.",
                 "The website is dynamic, so other developers can use it by changing the constants in the \"constants\" folder in the source code.",
                 "Making the website with accessibility standards.",
-                "Powerful contact form by using email.js library",
+                "Powerful contact form by using email.js library.",
             ]}
             />
         ),
@@ -320,4 +320,33 @@ export default [
             typescript,
         ],
     },
+    {
+        id: 9,
+        name: "Flutter Chat",
+        description: (
+            <CommonProjectContent
+            important="Flutter Chat"
+            header="is flutter framework based mobile app for making chats communication between users."
+            features={[
+                "Beautiful app design using material 3 design system.",
+                "Support for authentication for users including authentaication via google account.",
+                "Support for realtime data for live chats.",
+                "Using firebase for making database using firestore and auth with firebase auth.",
+                "Handling professionally loading and error states for good user experience.",
+            ]}
+            />
+        ),
+        repository: "https://github.com/mohammad-Gazali/gazali_chat_flutter",
+        images: [
+            "/assets/projects/flutter-chat/image-01.png",
+            "/assets/projects/flutter-chat/image-02.png",
+            "/assets/projects/flutter-chat/image-03.png",
+            "/assets/projects/flutter-chat/image-04.png",
+        ],
+        technologies: [
+            dart,
+            flutter,
+            firebase,
+        ]
+    }
 ] satisfies Project[];

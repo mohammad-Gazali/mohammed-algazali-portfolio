@@ -110,6 +110,24 @@ export const framerMotion: Technology = {
     image: "assets/technologies/framer-motion.svg",
 }
 
+export const dart: Technology = {
+    name: "Dart",
+    description: "Dart, developed by Google, is a modern and object-oriented programming language. With a syntax resembling Java and JavaScript, it enables building mobile, web, and desktop applications. Dart supports just-in-time and ahead-of-time compilation, making it versatile for efficient and high-performance development.",
+    image: "assets/technologies/dart.svg",
+}
+
+export const flutter: Technology = {
+    name: "Flutter",
+    description: "Flutter, an open-source UI framework by Google, allows developers to create visually stunning cross-platform applications for mobile, web, and desktop. Using the Dart language, Flutter's widget system enables building adaptive and responsive interfaces. Its hot reload feature facilitates fast development iterations and enhances productivity.",
+    image: "assets/technologies/flutter.svg",
+}
+
+export const firebase: Technology = {
+    name: "Firebase",
+    description: "Firebase, a Google-powered platform, offers a comprehensive set of backend services for mobile and web app development. With features like user authentication, real-time database, cloud storage, and hosting, Firebase simplifies backend infrastructure, enables real-time collaboration, and provides analytics and crash reporting capabilities for insights into app performance.",
+    image: "assets/technologies/firebase.svg",
+}
+
 
 export default [
     python,
@@ -117,16 +135,19 @@ export default [
     css,
     javascript,
     typescript,
+    dart,
     tailwind,
     django,
     react,
     bootstrap,
     materialUI,
     nextjs,
+    flutter,
     graphql,
     redis,
     postgresql,
     pocketBase,
+    firebase,
     supabase,
     docker,
     framerMotion,
