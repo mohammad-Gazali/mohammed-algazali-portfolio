@@ -25,3 +25,6 @@ dist-ssr
 
 # .env file
 .env
+
+# png large files folder
+png_projects_images
