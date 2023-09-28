@@ -128,21 +128,26 @@ export const firebase: Technology = {
     image: "assets/technologies/firebase.svg",
 }
 
+export const golang: Technology = {
+    name: "Go",
+    description: "Go, also known as Golang, is a statically typed, compiled programming language created by Google. Designed for efficiency and simplicity, it excels in building scalable, high-performance applications and services, making it popular for cloud computing, networking, and microservices development.",
+    image: "assets/technologies/go.svg",
+}
+
 
 export default [
     python,
-    htmlTech,
-    css,
+    golang,
     javascript,
     typescript,
     dart,
     tailwind,
     django,
+    flutter,
     react,
     bootstrap,
     materialUI,
     nextjs,
-    flutter,
     graphql,
     redis,
     postgresql,

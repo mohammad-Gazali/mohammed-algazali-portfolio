@@ -1,6 +1,6 @@
 import { Project } from "../types/app";
 import { FC } from "react";
-import { bootstrap, css, dart, django, firebase, flutter, framerMotion, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, python, react, supabase, tailwind, typescript } from "./technologies";
+import { bootstrap, css, dart, django, firebase, flutter, framerMotion, golang, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, postgresql, python, react, supabase, tailwind, typescript } from "./technologies";
 
 
 interface CommonProjectContentProps {
@@ -153,7 +153,7 @@ export default [
                 "Users authentication with email vertification by sending a magic link.",
                 "Users authentication with Google accounts",
                 "Protection from bots by reCAPTCHA.",
-                "Styling with plain CSS (it was plain 🥲)",
+                "Styling with plain CSS (it was painful 🥲)",
                 "Ability to add exams with multiple choice, true & false and essay questions with all vertifcation and validation process of these questions and this exam.",
                 "Full supported text editor for with all features like: bold, italic, underlined, colored, marked, aligned text and more text features.",
                 "The ability to uploading images to the questions.",
@@ -348,5 +348,53 @@ export default [
             flutter,
             firebase,
         ]
+    },
+    {
+        id: 10,
+        name: "Ghost Hosting",
+        description: (
+            <CommonProjectContent
+            important="Ghost Hosting"
+            header="is website for hosting services build with go language for backend and react with Material UI for frontend."
+            features={[
+                "Blazing fast backend build by go-fiber library with go programming language.",
+                "Authentication with JWT and handling the state of user by cookies.",
+                "Ability to send email in this website using standard library \"net/smtp\" in go.",
+                "Major content for a real hosting service website like service, FAQ, contact and more....",
+                "Beautiful UI by using material UI components library.",
+            ]}
+            />
+        ),
+        repository: "https://github.com/mohammad-Gazali/hosting-website-with-go",
+        images: [
+            "/assets/projects/ghost-hosting-website/image-01.webp",
+            "/assets/projects/ghost-hosting-website/image-02.webp",
+            "/assets/projects/ghost-hosting-website/image-03.webp",
+            "/assets/projects/ghost-hosting-website/image-04.webp",
+            "/assets/projects/ghost-hosting-website/image-05.webp",
+            "/assets/projects/ghost-hosting-website/image-06.webp",
+            "/assets/projects/ghost-hosting-website/image-07.webp",
+            "/assets/projects/ghost-hosting-website/image-08.webp",
+            "/assets/projects/ghost-hosting-website/image-09.webp",
+            "/assets/projects/ghost-hosting-website/image-10.webp",
+            "/assets/projects/ghost-hosting-website/image-11.webp",
+            "/assets/projects/ghost-hosting-website/image-12.webp",
+            "/assets/projects/ghost-hosting-website/image-13.webp",
+            "/assets/projects/ghost-hosting-website/image-14.webp",
+            "/assets/projects/ghost-hosting-website/image-15.webp",
+            "/assets/projects/ghost-hosting-website/image-16.webp",
+            "/assets/projects/ghost-hosting-website/image-17.webp",
+            "/assets/projects/ghost-hosting-website/image-18.webp",
+            "/assets/projects/ghost-hosting-website/image-19.webp",
+            "/assets/projects/ghost-hosting-website/image-20.webp",
+            "/assets/projects/ghost-hosting-website/image-21.webp",
+            "/assets/projects/ghost-hosting-website/image-22.webp",
+        ],
+        technologies: [
+            golang,
+            react,
+            materialUI,
+            postgresql,
+        ]
     }
-] satisfies Project[];
+].reverse() satisfies Project[];

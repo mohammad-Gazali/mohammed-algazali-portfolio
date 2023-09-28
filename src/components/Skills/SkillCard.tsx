@@ -15,7 +15,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 			<h3 className="px-3 font-medium text-center text-2xl transition-all">
 				{skill.title}
 			</h3>
-			<p className="px-10 text-center opacity-70 transition-all">
+			<p className="lg:px-10 px-4 lg:text-center opacity-70 transition-all">
 				{skill.description}
 			</p>
 		</motion.li>
