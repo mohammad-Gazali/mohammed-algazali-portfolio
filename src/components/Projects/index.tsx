@@ -32,7 +32,7 @@ const Projects: FC<ProjectsProps> = ({ selectedId, setSelectedId }) => {
 			whileInView={{ scale: 1 }}
 			viewport={{ once: true }}
 			>
-				All these projects are build by myself from A to Z 😁
+				All these projects are built by myself from A to Z 😁
 			</motion.p>
 			<ul className="mt-4 flex flex-wrap justify-center gap-4">
 				{projects.map((project) => (
