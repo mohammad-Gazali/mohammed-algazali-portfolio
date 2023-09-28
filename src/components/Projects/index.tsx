@@ -26,6 +26,14 @@ const Projects: FC<ProjectsProps> = ({ selectedId, setSelectedId }) => {
 			section
 		>
 			<Header animation>Projects</Header>
+			<motion.p
+			className="w-fit sm:text-lg/8 text-base/8 mt-4"
+			initial={{ scale: 0 }}
+			whileInView={{ scale: 1 }}
+			viewport={{ once: true }}
+			>
+				All these projects are build by myself from A to Z 😁
+			</motion.p>
 			<ul className="mt-4 flex flex-wrap justify-center gap-4">
 				{projects.map((project) => (
 					<ProjectCard
