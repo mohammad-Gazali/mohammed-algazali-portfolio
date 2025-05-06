@@ -1,0 +1,67 @@
+import { FC, ReactNode, HTMLAttributeAnchorTarget } from "react";
+import { cva, VariantProps } from "class-variance-authority";
+import cn from "../../utils/cn";
+
+export const buttonVariants = cva(
+  "relative gap-2 flex justify-center items-center uppercase transition-all duration-300 overflow-hidden bg-primary-100 dark:bg-primary-900 hover:bg-primary-200 dark:hover:bg-primary-800 text-primary-900 dark:text-primary-300 border border-primary-300 dark:border-primary-700 focus:shadow-lg focus:ring-2 focus:outline-none ring-primary-400 hover:shadow-lg shadow-primary-700/20",
+  {
+    variants: {
+      size: {
+        lg: "sm:py-3 py-2 px-6 sm:text-xl text-lg rounded-xl",
+        md: "py-2 px-4 sm:text-lg text-base rounded-xl",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+export interface ButtonProps extends VariantProps<typeof buttonVariants> {
+  children?: ReactNode;
+  className?: string | undefined;
+  href?: string | undefined;
+  target?: HTMLAttributeAnchorTarget;
+  download?: string | undefined;
+  tabIndex?: number | undefined;
+}
+
+const Button: FC<ButtonProps> = ({
+  size,
+  className,
+  children,
+  href,
+  target,
+  download,
+  tabIndex,
+}) => {
+  if (href) {
+    return (
+      <a
+        download={download}
+        tabIndex={tabIndex}
+        href={href}
+        target={target}
+        className={cn(
+          buttonVariants({
+            size,
+            className: `cursor-pointer ${className}`,
+          })
+        )}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      tabIndex={tabIndex}
+      className={cn(buttonVariants({ size, className }))}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;

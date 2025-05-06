@@ -107,7 +107,7 @@ export const docker: Technology = {
 export const framerMotion: Technology = {
     name: "Framer Motion",
     description: "Framer Motion is a popular animation library for React applications. It provides a simple and intuitive API for creating smooth and interactive animations. With Framer Motion, developers can easily animate components, define transitions, and add gesture-based interactions. It supports a wide range of animation options, including keyframes, spring physics, and variants. Framer Motion enhances the user experience by bringing websites and applications to life with delightful and engaging animations.",
-    image: "assets/technologies/framer-motion.svg",
+    image: "assets/technologies/motion.svg",
 }
 
 export const dart: Technology = {

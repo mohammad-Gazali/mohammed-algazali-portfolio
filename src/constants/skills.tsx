@@ -1,6 +1,6 @@
 import { Skill } from "../types/app";
 
-const iconClassName = "w-16 aspect-square fill-secondary transition-all";
+const iconClassName = "w-16 aspect-square fill-primary-500 transition-all";
 
 
 export default [
