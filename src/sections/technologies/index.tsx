@@ -19,7 +19,7 @@ const Technologies: FC<TechnologiesProps> = ({ selectedId, setSelectedId }) => {
       className="pt-10 mb-40 min-h-screen scroll-mt-10"
       section
     >
-      <Header>My Technologies</Header>
+      <Header animation>My Technologies</Header>
       <ul className="mt-4 flex justify-center flex-wrap gap-6">
         {technologies.map((technology) => (
           <TechnologyCard

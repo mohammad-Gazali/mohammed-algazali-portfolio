@@ -9,7 +9,7 @@ const ProjectTechnologyCard: FC<ProjectTechnologyCardProps> = ({
   technology,
 }) => {
   return (
-    <li className="bg-primary px-2 py-4  rounded-lg sm:w-40 w-32 aspect-square flex flex-col items-center sm:gap-3 gap-2">
+    <li className="bg-background px-2 py-4 rounded-lg sm:w-40 w-32 aspect-square flex flex-col items-center sm:gap-3 gap-2">
       <h3 className="text-center sm:text-xl text-base font-medium w-full whitespace-nowrap">
         {technology.name}
       </h3>

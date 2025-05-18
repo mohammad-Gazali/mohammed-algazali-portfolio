@@ -34,7 +34,13 @@ const Welcome = () => {
         {basic.intro}
       </motion.p>
       <motion.div className="mt-10 flex flex-wrap justify-center items-center gap-3 max-w-2xl w-full px-4">
-        <Button href="#about-section" className="grow" size="lg">
+        <Button
+          order={1}
+          initialDelay={0.5}
+          href="#about-section"
+          className="grow"
+          size="lg"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -51,7 +57,13 @@ const Welcome = () => {
           </svg>
           About me
         </Button>
-        <Button href="#contact-section" className="grow" size="lg">
+        <Button
+          order={2}
+          initialDelay={0.5}
+          href="#contact-section"
+          className="grow"
+          size="lg"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,6 +81,8 @@ const Welcome = () => {
           Contact
         </Button>
         <Button
+          order={3}
+          initialDelay={0.5}
           href="/assets/CV.pdf"
           download="Mohammed-algazali-cv"
           className="grow"

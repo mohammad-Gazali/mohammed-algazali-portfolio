@@ -10,7 +10,7 @@ const Skills = () => {
       id="skills-section"
       section
     >
-      <Header>Skills</Header>
+      <Header animation>Skills</Header>
       <ul className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-4">
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />

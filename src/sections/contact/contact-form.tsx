@@ -19,8 +19,7 @@ const ContactForm = () => {
 
     toastId = toast.loading("Sending the email", {
       id: toastId,
-      className:
-        "bg-primary-light-foreground text-primary-light w-72 text-center",
+      className: "w-72 text-center",
     });
 
     try {
@@ -33,16 +32,14 @@ const ContactForm = () => {
 
       toast.success("The email has been sended successully.", {
         id: toastId,
-        className:
-          "bg-primary-light-foreground text-primary-light w-72 text-center",
+        className: "w-72 text-center",
       });
 
       form.current?.reset();
     } catch (error) {
       toast.error("Something went wrong, please try again.", {
         id: toastId,
-        className:
-          "bg-primary-light-foreground text-primary-light w-72 text-center",
+        className: "w-72 text-center",
       });
 
       console.log(error);

@@ -47,6 +47,10 @@
 }
 
 @media (max-width: 500px) {
+    :root {
+        font-size: 14px;
+    }
+
     .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
     }

@@ -20,14 +20,20 @@ const TechnologyCardAnimatePresence: FC<TechnologyCardAnimatePresenceProps> = ({
           tabIndex={1}
           className="fixed inset-0 flex justify-center items-center bg-black/40 z-50 animate-presence"
           onClick={() => setSelectedId(null)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="bg-primary-light text-primary-light-foreground w-96 max-h-[90vh] overflow-y-auto sm:p-4 p-2 shadow-inner shadow-primary-light-foreground/30 rounded-lg flex flex-col items-center sm:gap-3 gap-2 relative mx-4"
+            className="bg-background text-background-foreground w-96 max-h-[90vh] overflow-y-auto sm:p-4 p-2 shadow-inner shadow-background-foreground/10 rounded-lg flex flex-col items-center sm:gap-3 gap-2 relative mx-4"
             layoutId={selectedId}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
           >
             <button
-              className="absolute sm:end-6 sm:top-6 end-2 top-2 sm:bg-primary-light-foreground/20 sm:hover:bg-primary-light-foreground/40 transition-all sm:p-2 rounded-full"
+              className="absolute sm:end-6 sm:top-6 end-2 top-2 sm:bg-background-foreground/10 sm:hover:bg-background-foreground/20 transition-all sm:p-2 rounded-full cursor-pointer"
               onClick={() => setSelectedId(null)}
             >
               <svg
@@ -48,7 +54,7 @@ const TechnologyCardAnimatePresence: FC<TechnologyCardAnimatePresenceProps> = ({
             <h3 className="text-3xl font-bold sm:mt-2 mt-4">
               {selectedTech?.name}
             </h3>
-            <p className="leading-7 sm:mt-4 sm:mx-0 mx-2">
+            <p className="leading-7 text-center sm:mt-4 sm:mx-0 mx-2">
               {selectedTech?.description}
             </p>
           </motion.div>

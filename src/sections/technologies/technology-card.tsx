@@ -1,5 +1,5 @@
-import { Technology } from "../../types/app";
 import { motion } from "motion/react";
+import { Technology } from "../../types/app";
 import { FC } from "react";
 
 interface TechnologyCardProps {
@@ -27,7 +27,7 @@ const TechnologyCard: FC<TechnologyCardProps> = ({
       whileInView={{ opacity: 1, rotate: 0 }}
       viewport={{ once: true }}
       onClick={() => setSelectedId(technology.name)}
-      className="bg-primary-light ring-0 focus-visible:ring-4 focus-visible:ring-secondary focus-visible:outline-none hover:ring-4 hover:ring-secondary grow max-w-[170px] sm:w-44 w-32 sm:aspect-square p-4 shadow-inner shadow-primary-light-foreground/30 rounded-lg cursor-pointer flex flex-col items-center sm:gap-3 gap-2 transition-shadow"
+      className="bg-background-foreground/5 ring-0 focus-visible:ring-4 focus-visible:ring-primary-400 focus-visible:outline-none hover:ring-4 hover:ring-secondary grow max-w-[170px] sm:w-44 w-32 sm:aspect-square p-4 shadow-inner shadow-background-foreground/10 rounded-lg cursor-pointer flex flex-col items-center sm:gap-3 gap-2 transition-shadow"
       key={technology.name}
     >
       <h3 className="text-center sm:text-xl text-base font-medium w-full whitespace-nowrap">

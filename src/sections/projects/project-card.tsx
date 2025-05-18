@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { Project } from "../../types/app";
 import { FC } from "react";
-import { motion } from "motion/react";
 
 interface ProjectCardProps {
   project: Project;
@@ -25,7 +25,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, setSelectedId }) => {
       whileHover={{ scale: 1.05 }}
       viewport={{ once: true }}
       onClick={() => setSelectedId(project.name)}
-      className="bg-primary-light focus-visible:ring-4 focus-visible:ring-secondary focus-visible:outline-none hover:bg-secondary-light transition-colors hover:shadow-lg hover:shadow-secondary-light-foreground/20 max-w-xs rounded-lg cursor-pointer"
+      className="bg-background-foreground/10 focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:outline-none hover:bg-background-foreground/20 max-w-xs rounded-lg cursor-pointer transition-colors"
       key={project.name}
     >
       <img

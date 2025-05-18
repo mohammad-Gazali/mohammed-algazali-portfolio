@@ -21,8 +21,11 @@ const ProjectCardAnimatePresence: FC<ProjectCardAnimatePresenceProps> = ({
       {selectedId && (
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className="bg-primary-light text-primary-light-foreground fixed inset-0 overflow-y-auto custom-scrollbar flex flex-col items-center sm:gap-3 gap-2 z-50 pb-10 animate-presence"
+          className="bg-[#2b2b34] text-primary-light-foreground fixed inset-0 overflow-y-auto custom-scrollbar flex flex-col items-center sm:gap-3 gap-2 z-50 pb-10 animate-presence"
           layoutId={selectedId}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
         >
           <button
             tabIndex={0}

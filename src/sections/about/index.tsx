@@ -1,54 +1,93 @@
 import { basic } from "../../constants";
-import Button from "../../components/ui/button";
+import { buttonVariants } from "../../components/ui/button";
 import Header from "../../components/ui/header";
 import Container from "../../components/ui/container";
+import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <Container
-      section
-      id="about-section"
-      className="pt-10 mb-20 scroll-mt-10"
-    >
+    <Container section id="about-section" className="pt-10 mb-20 scroll-mt-10">
       <div className="flex lg:justify-between items-start gap-5">
         <div className="lg:w-2/3">
-          <Header>About me</Header>
-          <p
+          <Header animation>About me</Header>
+          <motion.p
             className="sm:text-lg/8 text-base/8 mt-4"
+            initial={{ opacity: 0, translateX: 20 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.3,
+            }}
           >
             {basic.about}
-          </p>
+          </motion.p>
           <div className="flex gap-4 flex-wrap my-4">
-            <Button
-              size="lg"
-              className="grow lg:w-fit"
+            <motion.a
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.5,
+              }}
+              className={buttonVariants({
+                size: "lg",
+                className: "grow lg:w-fit",
+              })}
               href="#skills-section"
             >
               My Skills
-            </Button>
-            <Button
-              size="lg"
-              className="grow lg:w-fit"
+            </motion.a>
+            <motion.a
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.5,
+              }}
+              className={buttonVariants({
+                size: "lg",
+                className: "grow lg:w-fit",
+              })}
               href="#projects-section"
             >
               My Projects
-            </Button>
-            <Button
-              size="lg"
-              className="grow lg:w-fit"
+            </motion.a>
+            <motion.a
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.5,
+              }}
+              className={buttonVariants({
+                size: "lg",
+                className: "grow lg:w-fit",
+              })}
               href="#technologies-sections"
             >
               My Technologies
-            </Button>
+            </motion.a>
           </div>
         </div>
         <figure className="lg:block hidden">
-          <img
+          <motion.img
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.8,
+            }}
             src="assets/developer.svg"
             alt="developer"
           />
-          <figcaption
+          <motion.figcaption
             className="text-sm text-center text-background-foreground/60 underline"
+            initial={{ opacity: 0, translateX: -20 }}
+            whileInView={{ opacity: 0.6, translateX: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 1,
+            }}
           >
             <a
               href="https://iconscout.com/illustrations/working-with-laptop"
@@ -67,7 +106,7 @@ const About = () => {
             <a href="https://iconscout.com" target="_blank">
               IconScout
             </a>
-          </figcaption>
+          </motion.figcaption>
         </figure>
       </div>
     </Container>
