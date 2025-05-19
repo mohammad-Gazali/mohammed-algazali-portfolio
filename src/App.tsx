@@ -3,12 +3,14 @@ import {
   About,
   Projects,
   Skills,
+  Achievements,
   Welcome,
   Technologies,
   Contact,
   Footer,
 } from "./sections";
 import { useEffect, useState } from "react";
+import FloatGradiants from "./components/float-gradiants";
 
 const App = () => {
   const [selectedIdTech, setSelectedIdTech] = useState<string | null>(null);
@@ -57,20 +59,27 @@ const App = () => {
   });
 
   return (
-    <main className="bg-background text-background-foreground w-full min-h-screen overflow-x-hidden">
-      <Welcome />
-      <About />
-      <Skills />
-      <Projects selectedId={selectedIdTech} setSelectedId={setSelectedIdTech} />
-      <Technologies
-        selectedId={selectedIdProject}
-        setSelectedId={setSelectedIdProject}
-      />
-      <Contact />
-      <Footer />
+    <>
+      <main className="text-background-foreground w-full min-h-screen overflow-x-hidden relative">
+        <Welcome />
+        <About />
+        <Skills />
+        <Achievements />
+        <Projects
+          selectedId={selectedIdTech}
+          setSelectedId={setSelectedIdTech}
+        />
+        <Technologies
+          selectedId={selectedIdProject}
+          setSelectedId={setSelectedIdProject}
+        />
+        <Contact />
+        <Footer />
 
-      <Toaster />
-    </main>
+        <Toaster />
+        <FloatGradiants />
+      </main>
+    </>
   );
 };
 

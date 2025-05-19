@@ -2,10 +2,11 @@ import { basic } from "../../constants";
 import { motion } from "motion/react";
 import { BeamsBackground } from "./beams-background";
 import Button from "../../components/ui/button";
+import { ContainerTextFlip } from "./container-text-flip";
 
 const Welcome = () => {
   return (
-    <BeamsBackground className="h-screen flex flex-col justify-center items-center">
+    <BeamsBackground className="min-h-screen flex flex-col justify-center items-center py-8">
       <motion.h1
         initial={{ y: -400 }}
         animate={{ y: 0 }}
@@ -22,21 +23,33 @@ const Welcome = () => {
           {basic.name}
         </span>
       </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, translateX: 20 }}
-        animate={{ opacity: 1, translateX: 0 }}
+      <motion.div
+        initial={{ scaleX: 0, opacity: 0 }}
+        animate={{ scaleX: 1, opacity: 1 }}
         transition={{
           delay: 0.6,
           duration: 0.4,
         }}
-        className="opacity-90 max-w-3xl xl:text-xl/relaxed lg:text-lg/relaxed text-base text-center mt-6 px-6 z-1"
+      >
+        <ContainerTextFlip 
+          words={["Web Developer", "Tech Enthusiast", "Software Engineer"]}
+        />
+      </motion.div>
+      <motion.p
+        initial={{ opacity: 0, translateX: 20 }}
+        animate={{ opacity: 1, translateX: 0 }}
+        transition={{
+          delay: 1.2,
+          duration: 0.4,
+        }}
+        className="opacity-90 max-w-3xl xl:text-xl/relaxed lg:text-lg/relaxed text-base text-center mt-4 px-6 z-1"
       >
         {basic.intro}
       </motion.p>
       <motion.div className="mt-10 flex flex-wrap justify-center items-center gap-3 max-w-2xl w-full px-4">
         <Button
           order={1}
-          initialDelay={0.5}
+          initialDelay={1.2}
           href="#about-section"
           className="grow"
           size="lg"
@@ -59,7 +72,7 @@ const Welcome = () => {
         </Button>
         <Button
           order={2}
-          initialDelay={0.5}
+          initialDelay={1.2}
           href="#contact-section"
           className="grow"
           size="lg"
@@ -82,7 +95,7 @@ const Welcome = () => {
         </Button>
         <Button
           order={3}
-          initialDelay={0.5}
+          initialDelay={1.2}
           href="/assets/CV.pdf"
           download="Mohammed-algazali-cv"
           className="grow"

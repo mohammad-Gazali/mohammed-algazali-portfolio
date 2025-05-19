@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/forms';
 
 @theme {
-    --color-background: #202029;
+    --color-background: #1b1b22;
     --color-background-foreground: #FFFFFF;
 
     --color-primary-50: var(--color-teal-50);
@@ -16,12 +16,33 @@
     --color-primary-800: var(--color-teal-800);
     --color-primary-900: var(--color-teal-900);
     --color-primary-950: var(--color-teal-950);
+
+    --color-achievement-card: #27272d;
+
+    --animate-blob: blob 10s infinite;
+
+    @keyframes blob {
+
+        0% {
+            transform: translate(0px, 0px) scale(1);
+        }
+
+        33% {
+            transform: translate(30px, -50px) scale(1.1);
+        }
+
+        66% {
+            transform: translate(-20px, 20px) scale(0.9);
+        }
+
+        100% {
+            transform: translate(0px, 0px) scale(1);
+        }
+    }
 }
 
 :root {
     color-scheme: dark;
-
-    --test: #202029;
 }
 
 * {
@@ -29,30 +50,28 @@
     scroll-behavior: smooth;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-    width: 12px;
-}
+@media (min-width: 500px) {
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 14px;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-}
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(88, 88, 88, 0.6);
-    border-radius: 20px;
-}
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(88, 88, 88, 0.6);
+        border-radius: 20px;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(88, 88, 88, 0.8);
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(88, 88, 88, 0.8);
+    }
 }
 
 @media (max-width: 500px) {
     :root {
-        font-size: 14px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
+        font-size: 12px;
     }
 
     /** for handling image slider arrows, so they will disapear in the small screens */
