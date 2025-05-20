@@ -63,9 +63,9 @@ const About = () => {
                 size: "lg",
                 className: "grow lg:w-fit",
               })}
-              href="#technologies-sections"
+              href="#achievements-section"
             >
-              My Technologies
+              My Achievements
             </motion.a>
           </div>
         </div>

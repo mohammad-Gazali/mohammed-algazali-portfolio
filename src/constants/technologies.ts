@@ -161,6 +161,12 @@ export const golang: Technology = {
   image: 'assets/technologies/go.svg',
 };
 
+export const trpc: Technology = {
+  name: 'tRPC',
+  description: 'tRPC is a TypeScript-first RPC (Remote Procedure Call) framework that enables type-safe communication between clients and servers, ensuring end-to-end type safety and reducing boilerplate in API development.',
+  image: 'assets/technologies/trpc.svg'
+}
+
 export default [
   python,
   golang,

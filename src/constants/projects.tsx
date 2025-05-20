@@ -1,6 +1,6 @@
 import { Project } from "../types/app";
 import { FC } from "react";
-import { bootstrap, css, dart, django, firebase, flutter, framerMotion, golang, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, postgresql, python, react, supabase, tailwind, typescript } from "./technologies";
+import { bootstrap, css, django, framerMotion, golang, graphql, htmlTech, javascript, materialUI, nextjs, pocketBase, postgresql, python, react, redis, supabase, tailwind, trpc, typescript } from "./technologies";
 
 
 interface CommonProjectContentProps {
@@ -144,59 +144,28 @@ export default [
     },
     { 
         id: 4,
-        name: "Django Exams App",
+        name: "Light Social Facebook main page copy",
         description: (
             <CommonProjectContent
-            important="Django Exams App"
-            header="is an educational site for making and taking exams, this website was built using Django framework."
+            important="Light Social"
+            header="is a Facebook main page copy, this website was built using React framework."
             features={[
-                "Users authentication with email vertification by sending a magic link.",
-                "Users authentication with Google accounts",
-                "Protection from bots by reCAPTCHA.",
-                "Styling with plain CSS (it was painful 🥲)",
-                "Ability to add exams with multiple choice, true & false and essay questions with all vertifcation and validation process of these questions and this exam.",
-                "Full supported text editor for with all features like: bold, italic, underlined, colored, marked, aligned text and more text features.",
-                "The ability to uploading images to the questions.",
-                "Giving the result after taking the exam automatically.",
-                "Displaying the right answers after finishing the exams with explanation of all the answers."
+                "Support for light and dark themes.",
             ]}
             />
         ),
-        repository: "https://github.com/mohammad-Gazali/Exams-app",
+        repository: "https://github.com/mohammad-Gazali/Light_social_app",
         images: [
-            "/assets/projects/django-exams-app/image-01.webp",
-            "/assets/projects/django-exams-app/image-02.webp",
-            "/assets/projects/django-exams-app/image-03.webp",
-            "/assets/projects/django-exams-app/image-04.webp",
-            "/assets/projects/django-exams-app/image-05.webp",
-            "/assets/projects/django-exams-app/image-06.webp",
-            "/assets/projects/django-exams-app/image-07.webp",
-            "/assets/projects/django-exams-app/image-08.webp",
-            "/assets/projects/django-exams-app/image-09.webp",
-            "/assets/projects/django-exams-app/image-10.webp",
-            "/assets/projects/django-exams-app/image-11.webp",
-            "/assets/projects/django-exams-app/image-12.webp",
-            "/assets/projects/django-exams-app/image-13.webp",
-            "/assets/projects/django-exams-app/image-14.webp",
-            "/assets/projects/django-exams-app/image-15.webp",
-            "/assets/projects/django-exams-app/image-16.webp",
-            "/assets/projects/django-exams-app/image-17.webp",
-            "/assets/projects/django-exams-app/image-18.webp",
-            "/assets/projects/django-exams-app/image-19.webp",
-            "/assets/projects/django-exams-app/image-20.webp",
-            "/assets/projects/django-exams-app/image-21.webp",
-            "/assets/projects/django-exams-app/image-22.webp",
-            "/assets/projects/django-exams-app/image-23.webp",
-            "/assets/projects/django-exams-app/image-24.webp",
-            "/assets/projects/django-exams-app/image-25.webp",
-            "/assets/projects/django-exams-app/image-26.webp",
+            "/assets/projects/react-light-social/image-01.webp",
+            "/assets/projects/react-light-social/image-02.webp",
+            "/assets/projects/react-light-social/image-03.webp",
+            "/assets/projects/react-light-social/image-04.webp",
         ],
         technologies: [
-            python,
-            django,
-            htmlTech,
-            css,
-            javascript
+            react,
+            tailwind,
+            supabase,
+            javascript,
         ],
     },
     { 
@@ -262,28 +231,59 @@ export default [
     },
     { 
         id: 7,
-        name: "Light Social Facebook main page copy",
+        name: "Django Exams App",
         description: (
             <CommonProjectContent
-            important="Light Social"
-            header="is a Facebook main page copy, this website was built using React framework."
+            important="Django Exams App"
+            header="is an educational site for making and taking exams, this website was built using Django framework."
             features={[
-                "Support for light and dark themes.",
+                "Users authentication with email vertification by sending a magic link.",
+                "Users authentication with Google accounts",
+                "Protection from bots by reCAPTCHA.",
+                "Styling with plain CSS (it was painful 🥲)",
+                "Ability to add exams with multiple choice, true & false and essay questions with all vertifcation and validation process of these questions and this exam.",
+                "Full supported text editor for with all features like: bold, italic, underlined, colored, marked, aligned text and more text features.",
+                "The ability to uploading images to the questions.",
+                "Giving the result after taking the exam automatically.",
+                "Displaying the right answers after finishing the exams with explanation of all the answers."
             ]}
             />
         ),
-        repository: "https://github.com/mohammad-Gazali/Light_social_app",
+        repository: "https://github.com/mohammad-Gazali/Exams-app",
         images: [
-            "/assets/projects/react-light-social/image-01.webp",
-            "/assets/projects/react-light-social/image-02.webp",
-            "/assets/projects/react-light-social/image-03.webp",
-            "/assets/projects/react-light-social/image-04.webp",
+            "/assets/projects/django-exams-app/image-01.webp",
+            "/assets/projects/django-exams-app/image-02.webp",
+            "/assets/projects/django-exams-app/image-03.webp",
+            "/assets/projects/django-exams-app/image-04.webp",
+            "/assets/projects/django-exams-app/image-05.webp",
+            "/assets/projects/django-exams-app/image-06.webp",
+            "/assets/projects/django-exams-app/image-07.webp",
+            "/assets/projects/django-exams-app/image-08.webp",
+            "/assets/projects/django-exams-app/image-09.webp",
+            "/assets/projects/django-exams-app/image-10.webp",
+            "/assets/projects/django-exams-app/image-11.webp",
+            "/assets/projects/django-exams-app/image-12.webp",
+            "/assets/projects/django-exams-app/image-13.webp",
+            "/assets/projects/django-exams-app/image-14.webp",
+            "/assets/projects/django-exams-app/image-15.webp",
+            "/assets/projects/django-exams-app/image-16.webp",
+            "/assets/projects/django-exams-app/image-17.webp",
+            "/assets/projects/django-exams-app/image-18.webp",
+            "/assets/projects/django-exams-app/image-19.webp",
+            "/assets/projects/django-exams-app/image-20.webp",
+            "/assets/projects/django-exams-app/image-21.webp",
+            "/assets/projects/django-exams-app/image-22.webp",
+            "/assets/projects/django-exams-app/image-23.webp",
+            "/assets/projects/django-exams-app/image-24.webp",
+            "/assets/projects/django-exams-app/image-25.webp",
+            "/assets/projects/django-exams-app/image-26.webp",
         ],
         technologies: [
-            react,
-            tailwind,
-            supabase,
-            javascript,
+            python,
+            django,
+            htmlTech,
+            css,
+            javascript
         ],
     },
     { 
@@ -320,35 +320,35 @@ export default [
             typescript,
         ],
     },
-    {
-        id: 9,
-        name: "Flutter Chat",
-        description: (
-            <CommonProjectContent
-            important="Flutter Chat"
-            header="is flutter framework based mobile app for making chats communication between users."
-            features={[
-                "Beautiful app design using material 3 design system.",
-                "Support for authentication for users including authentaication via google account.",
-                "Support for realtime data for live chats.",
-                "Using firebase for making database using firestore and auth with firebase auth.",
-                "Handling professionally loading and error states for good user experience.",
-            ]}
-            />
-        ),
-        repository: "https://github.com/mohammad-Gazali/gazali_chat_flutter",
-        images: [
-            "/assets/projects/flutter-chat/image-01.webp",
-            "/assets/projects/flutter-chat/image-02.webp",
-            "/assets/projects/flutter-chat/image-03.webp",
-            "/assets/projects/flutter-chat/image-04.webp",
-        ],
-        technologies: [
-            dart,
-            flutter,
-            firebase,
-        ]
-    },
+    // {
+    //     id: 9,
+    //     name: "Flutter Chat",
+    //     description: (
+    //         <CommonProjectContent
+    //         important="Flutter Chat"
+    //         header="is flutter framework based mobile app for making chats communication between users."
+    //         features={[
+    //             "Beautiful app design using material 3 design system.",
+    //             "Support for authentication for users including authentaication via google account.",
+    //             "Support for realtime data for live chats.",
+    //             "Using firebase for making database using firestore and auth with firebase auth.",
+    //             "Handling professionally loading and error states for good user experience.",
+    //         ]}
+    //         />
+    //     ),
+    //     repository: "https://github.com/mohammad-Gazali/gazali_chat_flutter",
+    //     images: [
+    //         "/assets/projects/flutter-chat/image-01.webp",
+    //         "/assets/projects/flutter-chat/image-02.webp",
+    //         "/assets/projects/flutter-chat/image-03.webp",
+    //         "/assets/projects/flutter-chat/image-04.webp",
+    //     ],
+    //     technologies: [
+    //         dart,
+    //         flutter,
+    //         firebase,
+    //     ]
+    // },
     {
         id: 10,
         name: "Ghost Hosting",
@@ -396,5 +396,46 @@ export default [
             materialUI,
             postgresql,
         ]
+    },
+    {
+        id: 11,
+        name: "Karim Tour",
+        description: <CommonProjectContent
+            important="Karim Tour"
+            header="is website for booking trips and travels, it is easy to use and has a clean UI."
+            features={[
+                "Clean UI using shadcn that makes the whole website looks beautiful and consistent with dark mode support.",
+                "Authentication via Clerk auth provider with google and email based auth.",
+                "Using of tRPC to make typesafe communication between the client and the server, ensuring end-to-end type safety and reducing boilerplate in API development.",
+                "Strong support for SEO standards and enable PWA support for this website.",
+                "Protection against spamming attacks via rate limiting by using redis database.",
+                "The usage of Drizzle ORM for managing fast and typesafe database queries.",
+                "Supporting both English and Russian languages in the website with consideration of SEO strong support.",
+            ]}
+            />,
+        repository: "https://github.com/mohammad-Gazali/kiwi-travel",
+        images: [
+            "/assets/projects/karim-tour/image-01.webp",
+            "/assets/projects/karim-tour/image-02.webp",
+            "/assets/projects/karim-tour/image-03.webp",
+            "/assets/projects/karim-tour/image-04.webp",
+            "/assets/projects/karim-tour/image-05.webp",
+            "/assets/projects/karim-tour/image-06.webp",
+            "/assets/projects/karim-tour/image-07.webp",
+            "/assets/projects/karim-tour/image-08.webp",
+            "/assets/projects/karim-tour/image-09.webp",
+            "/assets/projects/karim-tour/image-10.webp",
+            "/assets/projects/karim-tour/image-11.webp",
+            "/assets/projects/karim-tour/image-12.webp",
+            "/assets/projects/karim-tour/image-13.webp",
+        ],
+        technologies: [
+            nextjs,
+            tailwind,
+            typescript,
+            trpc,
+            postgresql,
+            redis,
+        ],
     }
 ].reverse() satisfies Project[];
