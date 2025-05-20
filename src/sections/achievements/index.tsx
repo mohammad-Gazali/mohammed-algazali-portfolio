@@ -36,7 +36,7 @@ export default function Achievements() {
             <div>
               <div className="bg-achievement-card p-6 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-300">
+                  <div className="p-3 rounded-full bg-violet-900/30 text-violet-300">
                     <Code className="h-8 w-8" />
                   </div>
                   <div>
@@ -141,7 +141,7 @@ export default function Achievements() {
             <div>
               <div className="bg-achievement-card p-6">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300">
+                  <div className="p-3 rounded-full bg-emerald-900/30 text-emerald-300">
                     <Award className="h-8 w-8" />
                   </div>
                   <div>
@@ -167,7 +167,7 @@ export default function Achievements() {
                     <div
                       className="relative pl-10 pb-8"
                     >
-                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-900/30 flex items-center justify-center">
                         <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
                       </div>
                       <h4 className="font-semibold flex items-center gap-2">
@@ -182,7 +182,7 @@ export default function Achievements() {
                     <div
                       className="relative pl-10 pb-8"
                     >
-                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-900/30 flex items-center justify-center">
                         <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
                       </div>
                       <h4 className="font-semibold flex items-center gap-2">
@@ -197,7 +197,7 @@ export default function Achievements() {
                     <div
                       className="relative pl-10"
                     >
-                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-emerald-900/30 flex items-center justify-center">
                         <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
                       </div>
                       <h4 className="font-semibold flex items-center gap-2">
@@ -225,7 +225,7 @@ export default function Achievements() {
                       ].map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-medium"
+                          className="px-3 py-1 bg-emerald-900/30 text-emerald-300 rounded-full text-xs font-medium"
                         >
                           {skill}
                         </span>
