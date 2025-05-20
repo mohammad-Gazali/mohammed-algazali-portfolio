@@ -6,7 +6,16 @@ import { ContainerTextFlip } from "./container-text-flip";
 
 const Welcome = () => {
   return (
-    <BeamsBackground className="min-h-screen flex flex-col justify-center items-center py-8">
+    <BeamsBackground
+      className="min-h-screen flex flex-col justify-center items-center py-8"
+      intensity={
+        window.innerWidth >= 1000
+          ? "strong"
+          : window.innerWidth >= 500
+            ? "medium"
+            : "subtle"
+      }
+    >
       <motion.h1
         initial={{ y: -400 }}
         animate={{ y: 0 }}
@@ -31,7 +40,7 @@ const Welcome = () => {
           duration: 0.4,
         }}
       >
-        <ContainerTextFlip 
+        <ContainerTextFlip
           words={["Web Developer", "Tech Enthusiast", "Software Engineer"]}
         />
       </motion.div>
