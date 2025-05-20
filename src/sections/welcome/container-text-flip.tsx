@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useId } from "react";
 
-import { motion } from "motion/react";
+import { motion, useMotionValue } from "motion/react";
 import cn from "../../utils/cn";
 
 export interface ContainerTextFlipProps {
@@ -27,15 +27,15 @@ export function ContainerTextFlip({
 }: ContainerTextFlipProps) {
   const id = useId();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [width, setWidth] = useState(500);
-  const textRef = React.useRef(null);
+  const width = useMotionValue(500);
+  const textRef = React.useRef(null)
 
   const updateWidthForWord = () => {
     if (textRef.current) {
       // Add some padding to the text width (30px on each side)
       // @ts-ignore
       const textWidth = textRef.current.scrollWidth + 30;
-      setWidth(textWidth);
+      width.set(textWidth);
     }
   };
 
@@ -57,7 +57,7 @@ export function ContainerTextFlip({
     <motion.p
       layout
       layoutId={`words-here-${id}`}
-      animate={{ width }}
+      animate={{ width: width.get() }}
       transition={{ duration: animationDuration / 2000 }}
       className={cn(
         "relative inline-block rounded-lg mt-4 p-2 text-center xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold bg-purple-200/20 text-purple-400 backdrop-blur-sm xl:h-14 lg:h-13 md:h-12 h-11 overflow-hidden",
