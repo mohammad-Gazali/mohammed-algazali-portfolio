@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import cn from "../../utils/cn";
 
 interface AnimatedGradientBackgroundProps {
@@ -11,50 +11,50 @@ interface AnimatedGradientBackgroundProps {
   intensity?: "subtle" | "medium" | "strong";
 }
 
-interface Beam {
-  x: number;
-  y: number;
-  width: number;
-  length: number;
-  angle: number;
-  speed: number;
-  opacity: number;
-  hue: number;
-  pulse: number;
-  pulseSpeed: number;
-}
+// interface Beam {
+//   x: number;
+//   y: number;
+//   width: number;
+//   length: number;
+//   angle: number;
+//   speed: number;
+//   opacity: number;
+//   hue: number;
+//   pulse: number;
+//   pulseSpeed: number;
+// }
 
-function createBeam(width: number, height: number): Beam {
-  const angle = -35 + Math.random() * 10;
-  return {
-    x: Math.random() * width * 1.5 - width * 0.25,
-    y: Math.random() * height * 1.5 - height * 0.25,
-    width: 30 + Math.random() * 60,
-    length: height * 2.5,
-    angle: angle,
-    speed: 0.6 + Math.random() * 1.2,
-    opacity: 0.12 + Math.random() * 0.16,
-    hue: 190 + Math.random() * 70,
-    pulse: Math.random() * Math.PI * 2,
-    pulseSpeed: 0.02 + Math.random() * 0.03,
-  };
-}
+// function createBeam(width: number, height: number): Beam {
+//   const angle = -35 + Math.random() * 10;
+//   return {
+//     x: Math.random() * width * 1.5 - width * 0.25,
+//     y: Math.random() * height * 1.5 - height * 0.25,
+//     width: 30 + Math.random() * 60,
+//     length: height * 2.5,
+//     angle: angle,
+//     speed: 0.6 + Math.random() * 1.2,
+//     opacity: 0.12 + Math.random() * 0.16,
+//     hue: 190 + Math.random() * 70,
+//     pulse: Math.random() * Math.PI * 2,
+//     pulseSpeed: 0.02 + Math.random() * 0.03,
+//   };
+// }
 
 export function BeamsBackground({
   className,
-  intensity = "strong",
+  // intensity = "strong",
   children,
 }: AnimatedGradientBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const beamsRef = useRef<Beam[]>([]);
-  const animationFrameRef = useRef<number>(0);
-  const MINIMUM_BEAMS = 20;
+  // const beamsRef = useRef<Beam[]>([]);
+  // const animationFrameRef = useRef<number>(0);
+  // const MINIMUM_BEAMS = 20;
 
-  const opacityMap = {
-    subtle: 0.7,
-    medium: 0.85,
-    strong: 1,
-  };
+  // const opacityMap = {
+  //   subtle: 0.7,
+  //   medium: 0.85,
+  //   strong: 1,
+  // };
 
   // useEffect(() => {
   //   const canvas = canvasRef.current;
