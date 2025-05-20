@@ -23,7 +23,7 @@ const TechnologyCard: FC<TechnologyCardProps> = ({
       tabIndex={0}
       onKeyDown={handleKeyDown}
       layoutId={technology.name}
-      initial={{ opacity: 0, rotate: 360 }}
+      initial={{ opacity: 0, rotate: 90 }}
       whileInView={{ opacity: 1, rotate: 0 }}
       viewport={{ once: true }}
       onClick={() => setSelectedId(technology.name)}
