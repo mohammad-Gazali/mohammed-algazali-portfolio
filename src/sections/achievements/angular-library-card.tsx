@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Code, Users, Zap } from "./icons";
-import { Progress } from "@radix-ui/react-progress";
+import { Progress } from "../../components/ui/progress";
 
 const AngularLibraryCard = () => {
   return (
