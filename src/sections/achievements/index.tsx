@@ -56,7 +56,7 @@ export default function Achievements() {
                     across multiple applications.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2 bg-muted/50 p-4 rounded-lg">
                       <div className="flex items-center gap-2">
                         <Zap className="h-5 w-5 text-amber-500" />
@@ -162,7 +162,7 @@ export default function Achievements() {
                   </p>
 
                   <div className="relative">
-                    <div className="absolute left-[15px] top-0 bottom-0 w-0.5 bg-emerald-600/70"></div>
+                    <div className="absolute left-[0.95rem] top-0 bottom-0 w-0.5 bg-emerald-600/70"></div>
 
                     <div
                       className="relative pl-10 pb-8"

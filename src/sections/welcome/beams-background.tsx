@@ -56,115 +56,115 @@ export function BeamsBackground({
     strong: 1,
   };
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
+  //   if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+  //   const ctx = canvas.getContext("2d");
+  //   if (!ctx) return;
 
-    const updateCanvasSize = () => {
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
-      canvas.style.width = `${window.innerWidth}px`;
-      canvas.style.height = `${window.innerHeight}px`;
-      ctx.scale(dpr, dpr);
+  //   const updateCanvasSize = () => {
+  //     const dpr = window.devicePixelRatio || 1;
+  //     canvas.width = window.innerWidth * dpr;
+  //     canvas.height = window.innerHeight * dpr;
+  //     canvas.style.width = `${window.innerWidth}px`;
+  //     canvas.style.height = `${window.innerHeight}px`;
+  //     ctx.scale(dpr, dpr);
 
-      const totalBeams = MINIMUM_BEAMS * 1.5;
-      beamsRef.current = Array.from({ length: totalBeams }, () =>
-        createBeam(canvas.width, canvas.height)
-      );
-    };
+  //     const totalBeams = MINIMUM_BEAMS * 1.5;
+  //     beamsRef.current = Array.from({ length: totalBeams }, () =>
+  //       createBeam(canvas.width, canvas.height)
+  //     );
+  //   };
 
-    updateCanvasSize();
-    window.addEventListener("resize", updateCanvasSize);
+  //   updateCanvasSize();
+  //   window.addEventListener("resize", updateCanvasSize);
 
-    function resetBeam(beam: Beam, index: number, totalBeams: number) {
-      if (!canvas) return beam;
+  //   function resetBeam(beam: Beam, index: number, totalBeams: number) {
+  //     if (!canvas) return beam;
 
-      const column = index % 3;
-      const spacing = canvas.width / 3;
+  //     const column = index % 3;
+  //     const spacing = canvas.width / 3;
 
-      beam.y = canvas.height + 100;
-      beam.x =
-        column * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
-      beam.width = 100 + Math.random() * 100;
-      beam.speed = 0.5 + Math.random() * 0.4;
-      beam.hue = 190 + (index * 70) / totalBeams;
-      beam.opacity = 0.2 + Math.random() * 0.1;
-      return beam;
-    }
+  //     beam.y = canvas.height + 100;
+  //     beam.x =
+  //       column * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
+  //     beam.width = 100 + Math.random() * 100;
+  //     beam.speed = 0.5 + Math.random() * 0.4;
+  //     beam.hue = 190 + (index * 70) / totalBeams;
+  //     beam.opacity = 0.2 + Math.random() * 0.1;
+  //     return beam;
+  //   }
 
-    function drawBeam(ctx: CanvasRenderingContext2D, beam: Beam) {
-      ctx.save();
-      ctx.translate(beam.x, beam.y);
-      ctx.rotate((beam.angle * Math.PI) / 180);
+  //   function drawBeam(ctx: CanvasRenderingContext2D, beam: Beam) {
+  //     ctx.save();
+  //     ctx.translate(beam.x, beam.y);
+  //     ctx.rotate((beam.angle * Math.PI) / 180);
 
-      // Calculate pulsing opacity
-      const pulsingOpacity =
-        beam.opacity *
-        (0.8 + Math.sin(beam.pulse) * 0.2) *
-        opacityMap[intensity];
+  //     // Calculate pulsing opacity
+  //     const pulsingOpacity =
+  //       beam.opacity *
+  //       (0.8 + Math.sin(beam.pulse) * 0.2) *
+  //       opacityMap[intensity];
 
-      const gradient = ctx.createLinearGradient(0, 0, 0, beam.length);
+  //     const gradient = ctx.createLinearGradient(0, 0, 0, beam.length);
 
-      // Enhanced gradient with multiple color stops
-      gradient.addColorStop(0, `hsla(${beam.hue}, 85%, 65%, 0)`);
-      gradient.addColorStop(
-        0.1,
-        `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity * 0.5})`
-      );
-      gradient.addColorStop(
-        0.4,
-        `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity})`
-      );
-      gradient.addColorStop(
-        0.6,
-        `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity})`
-      );
-      gradient.addColorStop(
-        0.9,
-        `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity * 0.5})`
-      );
-      gradient.addColorStop(1, `hsla(${beam.hue}, 85%, 65%, 0)`);
+  //     // Enhanced gradient with multiple color stops
+  //     gradient.addColorStop(0, `hsla(${beam.hue}, 85%, 65%, 0)`);
+  //     gradient.addColorStop(
+  //       0.1,
+  //       `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity * 0.5})`
+  //     );
+  //     gradient.addColorStop(
+  //       0.4,
+  //       `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity})`
+  //     );
+  //     gradient.addColorStop(
+  //       0.6,
+  //       `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity})`
+  //     );
+  //     gradient.addColorStop(
+  //       0.9,
+  //       `hsla(${beam.hue}, 85%, 65%, ${pulsingOpacity * 0.5})`
+  //     );
+  //     gradient.addColorStop(1, `hsla(${beam.hue}, 85%, 65%, 0)`);
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(-beam.width / 2, 0, beam.width, beam.length);
-      ctx.restore();
-    }
+  //     ctx.fillStyle = gradient;
+  //     ctx.fillRect(-beam.width / 2, 0, beam.width, beam.length);
+  //     ctx.restore();
+  //   }
 
-    function animate() {
-      if (!canvas || !ctx) return;
+  //   function animate() {
+  //     if (!canvas || !ctx) return;
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = "blur(35px)";
+  //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //     ctx.filter = "blur(35px)";
 
-      const totalBeams = beamsRef.current.length;
-      beamsRef.current.forEach((beam, index) => {
-        beam.y -= beam.speed;
-        beam.pulse += beam.pulseSpeed;
+  //     const totalBeams = beamsRef.current.length;
+  //     beamsRef.current.forEach((beam, index) => {
+  //       beam.y -= beam.speed;
+  //       beam.pulse += beam.pulseSpeed;
 
-        // Reset beam when it goes off screen
-        if (beam.y + beam.length < -100) {
-          resetBeam(beam, index, totalBeams);
-        }
+  //       // Reset beam when it goes off screen
+  //       if (beam.y + beam.length < -100) {
+  //         resetBeam(beam, index, totalBeams);
+  //       }
 
-        drawBeam(ctx, beam);
-      });
+  //       drawBeam(ctx, beam);
+  //     });
 
-      animationFrameRef.current = requestAnimationFrame(animate);
-    }
+  //     animationFrameRef.current = requestAnimationFrame(animate);
+  //   }
 
-    animate();
+  //   animate();
 
-    return () => {
-      window.removeEventListener("resize", updateCanvasSize);
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
-    };
-  }, [intensity]);
+  //   return () => {
+  //     window.removeEventListener("resize", updateCanvasSize);
+  //     if (animationFrameRef.current) {
+  //       cancelAnimationFrame(animationFrameRef.current);
+  //     }
+  //   };
+  // }, [intensity]);
 
   return (
     <section

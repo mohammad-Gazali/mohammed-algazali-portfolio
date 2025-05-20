@@ -4,7 +4,7 @@ import cn from "../../utils/cn";
 import { motion } from "motion/react";
 
 export const buttonVariants = cva(
-  "relative gap-2 flex justify-center items-center uppercase transition-all duration-300 overflow-hidden bg-primary-100 dark:bg-primary-900 hover:bg-primary-200 dark:hover:bg-primary-800 text-primary-900 dark:text-primary-300 border border-primary-300 dark:border-primary-700 focus:shadow-lg focus:ring-2 focus:outline-none ring-primary-400 hover:shadow-lg shadow-primary-700/20",
+  "relative gap-2 flex justify-center items-center uppercase transition-all duration-300 overflow-hidden bg-primary-900 hover:bg-primary-800 text-primary-300 border border-primary-700 focus:shadow-lg focus:ring-2 focus:outline-none ring-primary-400 hover:shadow-lg shadow-primary-700/20",
   {
     variants: {
       size: {
