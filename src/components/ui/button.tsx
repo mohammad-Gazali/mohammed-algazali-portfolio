@@ -58,7 +58,6 @@ const Button: FC<ButtonProps> = ({
                   ? delay * order + initialDelay
                   : delay * order,
                 duration: 0.1,
-                type: "linear",
               }
             : undefined
         }
@@ -86,7 +85,6 @@ const Button: FC<ButtonProps> = ({
                 ? delay * order + initialDelay
                 : delay * order,
               duration: 0.1,
-              type: "linear",
             }
           : undefined
       }
